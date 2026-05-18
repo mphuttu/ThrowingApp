@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="Description" content="Effekt Theme">
+    <meta name="author" content="CoffeeCup Software, Inc.">
+    <meta name="Copyright" content="Copyright (c) 2011 CoffeeCup, all rights reserved.">
+    <title>Effekt Theme - About</title>
+    <link rel="stylesheet" href="stylesheets/default.css" />
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<style>
+  .small-sup {
+    font-size: 0.7em;
+  }
+  sup {
+  font-size: smaller;
+  vertical-align: super;
+   }
+  sub {
+    font-size: smaller;    
+    vertical-align: sub;   /* for sub */
+} 
+  ul {
+  list-style-type: none; /* Remove bullets*/
+  padding: 0; /* Remove default padding */
+  margin: .5cm; 
+  text-align: left; /* Align items to the left */
+ }
+</style>
+
+</head>
+<body>
+    <section id="mainRight" class="clear">
+        <header>
+            <h1><span>Throwing App Help</span></h1>
+        </header>
+        <nav>
+            <ul style="list-style-type: disc; padding-left:5mm; display: flex;>
+                <li style="display:inline"><a href="index.html">Home</a></li>
+                <li style="display:inline"><a href="services.html">How To Use</a></li>
+                <li style="display:inline"><a href="about.html" class="selected">About</a></li>
+                <li style="display:inline"><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="float_right">
+			<h2>About</h2>
+ 			<p> Throwing App is developed to simulate throwing sports.  
+			It is a simple application to calculate and visualize the trajectory of thrown objects.</p>
+            <p>The application is based on the motion laws of the throwing movement. Air resistance has not been taken into account.</p>
+               
+		</section>
+        <section class="columns">
+
+			<img src="images/ShotPutterDALL-E.png" width="300" height="300" alt="" border="0">
+			
+
+			<p>Let's examine the motion of an object thrown diagonally upwards from the ground. The piece then moves under the 
+			gravitational force of the earth. The acceleration of gravity <b>g</b> is directed towards the center of the earth, 
+			but changes so slowly on the surface of the earth that we can use the approximation 
+			g = 9.81 m/s<sup class="small-sup">2</sup>.
+			So we assume that the acceleration has a constant value <b>g</b> = -g<b>k</b>
+            where <b>k</b> is a unit vector pointing upwards. We do not take into account the rotation of the earth, 
+			in which case the movement takes place entirely in a plane. In this plane, the vector <b>k</b> and another unit vector 
+			<b>i</b> perpendicular to it, i.e. directed along the earth's surface, determine the orthogonal coordinate system. 
+			Integrating the equation <b>g</b> = -g<b>k</b> twice gives the equations for the object's speed <b>v</b> and 
+			the distance traveled by the object <b>r</b>
+			</p>
+			<ul>
+			<li> <b>v</b> = -gt <b>k</b> + v<sub class="small-sup">0</sub></li>
+			<li> <b>r</b> = -<sup class="small-sup">1</sup>/<sub class="small-sup">2</sub> gt<sup class="small-sup">2</sup> <b>k</b> + t<b>v</b><sub class="small-sup">0</sub> + 
+			<b>r</b><sub class="small-sup">0</sub> </li>
+			</ul>
+			<p>
+			where t is time, <b>v</b><sub class="small-sup">0</sub> is initial velocity and 
+			<b>r</b><sub class="small-sup">0 </sub> is the starting location vector.
+			</p>
+			<!--
+			</section>
+			<div class="colLeft">
+			<h4>Who we are</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exertion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voltate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exertion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voltate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <a class="more" href="services.html">Read More</a>
+            </div>
+            <div class="colRight">
+			<h4>A bit of history</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exertion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voltate velit esse cillum dolore eu fugiat nulla pariatur anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exertion ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voltate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <a class="more" href="services.html">Read More</a>
+            </div>
+			</section>
+			-->
+
+ 		<!-- end columns -->
+        <h5 id="signature">Mika Huttunen Software</h5>
+        <footer>
+            <p>&copy; 2024 Mika Huttunen. All rights reserved.</p>
+            <ul style="list-style-type: disc; padding-left:5mm; display: flex;>
+                <li style="display:inline"><a href="index.html">Home</a></li>
+                <li style="display:inline"><a href="services.html">How to Use</a></li>
+                <li style="display:inline"><a href="about.html">About</a></li>
+                <li style="display:inline"><a href="contact.html">Contact</a></li>
+            </ul>
+        </footer>
+    </section>
+    <!-- end mainRight -->
+    <div id="logoTxt">
+        <h1><span></span></h1>
+        <h2><span></span></h2>
+    </div>
+</body>
+</html>
+
+

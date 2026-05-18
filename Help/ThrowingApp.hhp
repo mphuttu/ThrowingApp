@@ -1,0 +1,17 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=ThrowingApp.chm
+Contents file=Table of Contents.hhc
+Display compile progress=No
+Index file=Index.hhk
+Language=0x40b suomi (Suomi)
+
+
+[FILES]
+index.html
+about.html
+contact.html
+services.html
+
+[INFOTYPES]
+

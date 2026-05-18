@@ -1,0 +1,23 @@
+When m_dThrowAngle and m_dFlightDistance are known, the m_dInitialVelocity is calculated as
+
+v0 -> (a b Sqrt[Sec[c]])/Sqrt[2 bd Cos[c] + 2 a b Sin[c]]
+
+a = m_dFlightDistance;
+b = g; // Gravitational constant g = 9.80665; (m/s^2)
+c = m_dThrowAngle;
+d = m_dLaunchHeight;
+
+
+-------------------------------------------
+When v0 = m_dInitialVelocity and m_dFlighDistance are known, the m_dThrowAngle is calculated as
+
+phi0 -> ArcCos[(
+   Sqrt[(a^2 b^2 bd c^2)/(a^2 b^2 c^4 + bd^2 c^4) + (a^2 b^2 c^4)/(
+    a^2 b^2 c^4 + bd^2 c^4) - 
+    Sqrt[-a^4 b^4 c^4 (a^2 b^2 - 2 bd c^2 - c^4)]/(
+    a^2 b^2 c^4 + bd^2 c^4)]/Sqrt[2])
+
+a = m_dFlightDistance;
+b = g; // Gravitational constant g = 9.80665 m/s^2
+c = m_dInitialVelocity;
+d = m_dLaunchHeight;

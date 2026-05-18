@@ -1,0 +1,46 @@
+# Visual Studio local metadata
+.vs/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# IntelliSense database
+*.sdf
+*.opensdf
+ipch/
+
+# Build outputs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Object files
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.iobj
+*.ipdb
+
+# Resource editor temp file
+*.aps
+
+# Compiled help (keep source, ignore compiled binary & index)
+Help/*.chm
+Help/*.chw
+
+# Inno Setup output
+Output/
