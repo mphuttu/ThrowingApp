@@ -6,20 +6,32 @@
 <BODY>
 <UL>
     <LI> <OBJECT type="text/sitemap">
-            <param name="Name" value="Home">
+            <param name="Name" value="ThrowingApp">
             <param name="Local" value="index.html">
-         </OBJECT>
-    <LI> <OBJECT type="text/sitemap">
-            <param name="Name" value="How to Use">
-            <param name="Local" value="services.html">
-        </OBJECT>    
-    <LI> <OBJECT type="text/sitemap">
-            <param name="Name" value="Contact">
-            <param name="Local" value="contact.html">
         </OBJECT>
     <LI> <OBJECT type="text/sitemap">
-            <param name="Name" value="About">
-            <param name="Local" value="about.html">
+            <param name="Name" value="launch height">
+            <param name="Local" value="configuration.html">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+            <param name="Name" value="initial velocity">
+            <param name="Local" value="configuration.html">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+            <param name="Name" value="throw angle">
+            <param name="Local" value="features.html">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+            <param name="Name" value="projectile motion">
+            <param name="Local" value="overview.html">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+            <param name="Name" value="troubleshooting">
+            <param name="Local" value="troubleshooting.html">
+        </OBJECT>
+    <LI> <OBJECT type="text/sitemap">
+            <param name="Name" value="release notes">
+            <param name="Local" value="release-notes.html">
         </OBJECT>
 </UL>
 </BODY>

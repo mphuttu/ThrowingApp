@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technical Information</title>
+  <link rel="stylesheet" href="stylesheets/default.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <h1>ThrowingApp</h1>
+        <small>Technical information</small>
+      </div>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html">Welcome</a>
+        <a href="overview.html">Overview</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="configuration.html">Configuration</a>
+        <a href="features.html">Features</a>
+      </nav>
+    </header>
+    <main class="card">
+      <h2>Technical information</h2>
+      <p>ThrowingApp is implemented as a native Windows application using MFC and the Windows SDK. The calculation model uses a simplified gravity-based projectile equation and stores throw data in the document model.</p>
+      <h3>Requirements</h3>
+      <ul>
+        <li>Windows 10 or Windows 11 x64</li>
+        <li>Microsoft Visual C++ runtime dependencies</li>
+        <li>Access to the required MFC support libraries</li>
+      </ul>
+      <h3>Architecture notes</h3>
+      <p>The application keeps trajectory logic in the document and view layer, with dialog-based parameter entry for configuration and calculations. This separation keeps the interface simple while allowing future extension.</p>
+    </main>
+  </div>
+</body>
+</html>

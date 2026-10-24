@@ -14,6 +14,26 @@ struct ThrowParams {
 	COLORREF color;
 	double flightDistance;
 
+	static double ComputeFlightDistance(double heightValue, double velocityValue, double angleDegrees)
+	{
+		if (!std::isfinite(heightValue) || !std::isfinite(velocityValue) || !std::isfinite(angleDegrees))
+		{
+			return 0.0;
+		}
+
+		if (heightValue < 0.0 || velocityValue <= 0.0 || angleDegrees <= 0.0 || angleDegrees >= 90.0)
+		{
+			return 0.0;
+		}
+
+		const double gravity = 9.80665;
+		const double pi = 3.14159265358979323846;
+		const double radPhi0 = angleDegrees * pi / 180.0;
+		const double flightTime = (velocityValue * sin(radPhi0) +
+			sqrt(pow(velocityValue * sin(radPhi0), 2) + 2.0 * gravity * heightValue)) / gravity;
+		return velocityValue * flightTime * cos(radPhi0);
+	}
+
 	// Default constructor
     ThrowParams() 
         : height(0.0), initialVelocity(0.0), throwAngle(0.0), color(RGB(0, 0, 0)), flightDistance(0.0)
@@ -21,17 +41,8 @@ struct ThrowParams {
     }
 
 	ThrowParams(double h, double v0, double angle, COLORREF c)
-		: height(h), initialVelocity(v0), throwAngle(angle), color(c)
+		: height(h), initialVelocity(v0), throwAngle(angle), color(c), flightDistance(ComputeFlightDistance(h, v0, angle))
 	{
-		// Calculate flight distance
-		const double gravity = 9.80665; // Gravitational constant, or Gravity of Earth
-		const double dPii = 3.14159265358979323846;
-        double rad_phi0 = throwAngle * dPii / 180.0;
-        double sin_phi0 = sin(throwAngle * dPii / 180.0);
-        double flightTime = (initialVelocity * sin(rad_phi0) + 
-                             sqrt(pow(initialVelocity * sin(rad_phi0), 2) + 
-                             2 * gravity * height)) / gravity;
-        flightDistance = initialVelocity * flightTime * cos(rad_phi0);
 	}
 
 	 friend CArchive& operator<<(CArchive& ar, const ThrowParams& t)

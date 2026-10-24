@@ -49,18 +49,10 @@ BOOL CThrowingAppDoc::OnNewDocument()
 	if (!CDocument::OnNewDocument())
 		return FALSE;
 
-	// TODO: add reinitialization code here
-	// (SDI documents will reuse this document)
-
-	// Clear existing throws and add default throw
 	m_throws.clear();
-	// m_throws.push_back({1.75, 20.0, 45.0, RGB(255, 0, 0) }); // Does not work in the VS 2012
-	/*ThrowParams initialThrow;
-	initialThrow.height = 1.75;
-	initialThrow.initialVelocity = 20.0;
-	initialThrow.throwAngle = 45.0;
-	initialThrow.color = RGB(255, 0, 0);
-	m_throws.push_back(initialThrow);*/
+	m_throws.push_back(ThrowParams(1.75, 20.0, 45.0, RGB(255, 0, 0)));
+	SetModifiedFlag(FALSE);
+	UpdateAllViews(NULL);
 
 	return TRUE;
 }

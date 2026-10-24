@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feature Reference</title>
+  <link rel="stylesheet" href="stylesheets/default.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <h1>ThrowingApp</h1>
+        <small>Feature reference</small>
+      </div>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="index.html">Welcome</a>
+        <a href="overview.html">Overview</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="configuration.html">Configuration</a>
+        <a class="selected" href="features.html">Features</a>
+      </nav>
+    </header>
+    <main class="card">
+      <h2>Feature reference</h2>
+      <h3>Trajectory plot</h3>
+      <p>The main view draws the flight path for each configured throw. The plot is scaled to the data and shows the active projectile path in the selected color.</p>
+      <h3>Results dialog</h3>
+      <p>The results window summarizes each entry using the launch height, initial velocity, angle, and projected flight distance. It is ideal for comparing multiple attempts.</p>
+      <h3>Angle estimation</h3>
+      <p>The angle estimation dialog solves for a release angle when the flight distance, launch height, and initial speed are known. This is useful for optimization and comparison workflows.</p>
+      <h3>Velocity estimation</h3>
+      <p>The initial velocity estimator identifies the speed required for the chosen distance, angle, and launch height. It is useful for target-setting and benchmarking.</p>
+      <div class="tip"><strong>Example:</strong> Compare a 1.75 m release height with a 23.56 m target distance and adjust the angle or speed until the estimated result matches the desired range.</div>
+    </main>
+  </div>
+</body>
+</html>

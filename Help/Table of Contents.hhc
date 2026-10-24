@@ -9,21 +9,49 @@
 </OBJECT>
 <UL>
 	<LI> <OBJECT type="text/sitemap">
-		<param name="Name" value="Throwing App Help">
+		<param name="Name" value="Welcome">
 		<param name="Local" value="index.html">
-             </OBJECT>
-	<UL>
-             <LI> <OBJECT type="text/sitemap">
-                      <param name="Name" value="How to Use">
-                      <param name="Local" value="services.html">
-	          </OBJECT>
-             <LI> <OBJECT type="text/sitemap">
-                    <param name="Name" value="Contact">
-		    <param name="Local" value="contact.html">
-		   </OBJECT>
-             <LI> <OBJECT type="text/sitemap">
-                    <param name="Name" value="About">
-		    <param name="Local" value="about.html">
-                  </OBJECT>             
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Product Overview">
+		<param name="Local" value="overview.html">
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Getting Started">
+		<param name="Local" value="getting-started.html">
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Configuration and Settings">
+		<param name="Local" value="configuration.html">
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Feature Reference">
+		<param name="Local" value="features.html">
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Troubleshooting">
+		<param name="Local" value="troubleshooting.html">
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FAQ">
+		<param name="Local" value="faq.html">
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Technical Information">
+		<param name="Local" value="technical-info.html">
+		</OBJECT>
+	</LI>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="Release Notes">
+		<param name="Local" value="release-notes.html">
+		</OBJECT>
+	</LI>
 </UL>
 </BODY></HTML>

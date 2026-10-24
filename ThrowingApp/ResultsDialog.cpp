@@ -150,9 +150,10 @@ void CResultsDialog::AppendTextWithColor(const CString& text, COLORREF color, in
 
 void CResultsDialog::UpdateResults(const std::vector<ThrowParams>& throws)
 {
-	// Set up the RichEdit control
-	// Ensure the RichEdit control was created
-    ASSERT(m_resultsEdit.GetSafeHwnd());  // Ensure the RichEdit control was created
+	if (!m_hWnd || !m_resultsEdit.GetSafeHwnd())
+	{
+		return;
+	}
 
 	// Clear any existing text
 	m_resultsEdit.SetWindowTextW(_T(""));
@@ -235,8 +236,11 @@ void CResultsDialog::UpdateResults(const std::vector<ThrowParams>& throws)
 }
 void CResultsDialog::ClearResults(void)
 {
-	// Set up the RichEdit control
-    ASSERT(m_resultsEdit.GetSafeHwnd());  // Ensure the RichEdit control was created
+	if (!m_hWnd || !m_resultsEdit.GetSafeHwnd())
+	{
+		return;
+	}
+
 	m_resultsEdit.SetWindowTextW(_T(""));
 }
 

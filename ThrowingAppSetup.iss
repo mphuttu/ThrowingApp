@@ -36,14 +36,11 @@ Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{
 
 [Files]
 ; Main executable (built in Release configuration)
-Source: "ThrowingApp\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "x64\Release\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Help files
 Source: "Help\ThrowingApp.chm"; DestDir: "{app}\Help"; Flags: ignoreversion
-Source: "Help\index.html"; DestDir: "{app}\Help"; Flags: ignoreversion
-Source: "Help\about.html"; DestDir: "{app}\Help"; Flags: ignoreversion
-Source: "Help\contact.html"; DestDir: "{app}\Help"; Flags: ignoreversion
-Source: "Help\services.html"; DestDir: "{app}\Help"; Flags: ignoreversion
+Source: "Help\*.html"; DestDir: "{app}\Help"; Flags: ignoreversion
 Source: "Help\stylesheets\default.css"; DestDir: "{app}\Help\stylesheets"; Flags: ignoreversion
 Source: "Help\images\*"; DestDir: "{app}\Help\images"; Flags: ignoreversion recursesubdirs
 

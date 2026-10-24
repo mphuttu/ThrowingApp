@@ -2,16 +2,23 @@
 Compatibility=1.1 or later
 Compiled file=ThrowingApp.chm
 Contents file=Table of Contents.hhc
+Default topic=index.html
 Display compile progress=No
 Index file=Index.hhk
-Language=0x40b suomi (Suomi)
-
+Language=0x409 English (United States)
+Title=ThrowingApp Help
 
 [FILES]
 index.html
-about.html
-contact.html
-services.html
+overview.html
+getting-started.html
+configuration.html
+features.html
+troubleshooting.html
+faq.html
+technical-info.html
+release-notes.html
+stylesheets\default.css
 
 [INFOTYPES]
 
