@@ -74,6 +74,14 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;      // fail to create
 	}
 
+	const int helpImage = CMFCToolBar::GetImages()->AddIcon(::LoadIcon(NULL, IDI_QUESTION));
+	if (helpImage < 0 || m_wndToolBar.InsertButton(
+		CMFCToolBarButton(ID_HELP_FINDER, helpImage, _T("Help Contents"))) < 0)
+	{
+		TRACE0("Failed to add Help Contents toolbar button\n");
+		return -1;
+	}
+
 	CString strToolBarName;
 	bNameValid = strToolBarName.LoadString(IDS_TOOLBAR_STANDARD);
 	ASSERT(bNameValid);
@@ -137,6 +145,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	lstBasicCommands.AddTail(ID_EDIT_PASTE);
 	lstBasicCommands.AddTail(ID_EDIT_UNDO);
 	lstBasicCommands.AddTail(ID_APP_ABOUT);
+	lstBasicCommands.AddTail(ID_HELP_FINDER);
 	lstBasicCommands.AddTail(ID_VIEW_STATUS_BAR);
 	lstBasicCommands.AddTail(ID_VIEW_TOOLBAR);
 	lstBasicCommands.AddTail(ID_VIEW_APPLOOK_OFF_2003);

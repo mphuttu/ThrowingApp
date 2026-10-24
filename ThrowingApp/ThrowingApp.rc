@@ -136,6 +136,8 @@ BEGIN
     END
     POPUP "&Help"
     BEGIN
+        MENUITEM "&Contents\tF1",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
         MENUITEM "&About ThrowingApp...",       ID_APP_ABOUT
     END
 END
@@ -152,6 +154,8 @@ END
 
 IDR_HELP_MENU MENU
 BEGIN
+    MENUITEM "&Contents\tF1",                ID_HELP_FINDER
+    MENUITEM SEPARATOR
     MENUITEM "&About ThrowingApp...",       ID_APP_ABOUT
 END
 
@@ -186,6 +190,7 @@ BEGIN
     VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
     VK_F6,          ID_NEXT_PANE,           VIRTKEY 
     VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_F1,          ID_HELP_FINDER,         VIRTKEY
 END
 
 
@@ -311,6 +316,7 @@ END
 
 STRINGTABLE
 BEGIN
+    ID_HELP_FINDER          "Open the ThrowingApp help contents\nContents"
     ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
     ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
 END
@@ -618,4 +624,3 @@ LANGUAGE 9, 1
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED
-

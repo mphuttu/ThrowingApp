@@ -7,6 +7,7 @@
 #include "afxdialogex.h"
 #include "ThrowingApp.h"
 #include "MainFrm.h"
+#include <shellapi.h>
 
 #include "ThrowingAppDoc.h"
 #include "ThrowingAppView.h"
@@ -20,6 +21,7 @@
 
 BEGIN_MESSAGE_MAP(CThrowingAppApp, CWinAppEx)
 	ON_COMMAND(ID_APP_ABOUT, &CThrowingAppApp::OnAppAbout)
+	ON_COMMAND(ID_HELP_FINDER, &CThrowingAppApp::OnHelpContents)
 	// Standard file based document commands
 	ON_COMMAND(ID_FILE_NEW, &CWinAppEx::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinAppEx::OnFileOpen)
@@ -196,6 +198,45 @@ void CThrowingAppApp::OnAppAbout()
 	aboutDlg.DoModal();
 }
 
+void CThrowingAppApp::OnHelpContents()
+{
+	TCHAR modulePath[MAX_PATH] = {};
+	const DWORD pathLength = ::GetModuleFileName(NULL, modulePath, _countof(modulePath));
+	if (pathLength == 0 || pathLength >= _countof(modulePath))
+	{
+		AfxMessageBox(_T("Unable to locate the application folder."), MB_ICONERROR);
+		return;
+	}
+
+	CString helpPath(modulePath);
+	const int separator = helpPath.ReverseFind(_T('\\'));
+	if (separator == -1)
+	{
+		AfxMessageBox(_T("Unable to locate the application folder."), MB_ICONERROR);
+		return;
+	}
+
+	helpPath = helpPath.Left(separator + 1) + _T("Help\\ThrowingApp.chm");
+	const DWORD attributes = ::GetFileAttributes(helpPath);
+	if (attributes == INVALID_FILE_ATTRIBUTES || (attributes & FILE_ATTRIBUTE_DIRECTORY) != 0)
+	{
+		AfxMessageBox(_T("The help file could not be found:\n") + helpPath, MB_ICONERROR);
+		return;
+	}
+
+	const HINSTANCE result = ::ShellExecute(
+		m_pMainWnd != NULL ? m_pMainWnd->GetSafeHwnd() : NULL,
+		_T("open"),
+		helpPath,
+		NULL,
+		NULL,
+		SW_SHOWNORMAL);
+	if (reinterpret_cast<INT_PTR>(result) <= 32)
+	{
+		AfxMessageBox(_T("Windows could not open the help file:\n") + helpPath, MB_ICONERROR);
+	}
+}
+
 // CThrowingAppApp customization load/save methods
 
 void CThrowingAppApp::PreLoadState()
@@ -216,6 +257,4 @@ void CThrowingAppApp::SaveCustomState()
 }
 
 // CThrowingAppApp message handlers
-
-
 

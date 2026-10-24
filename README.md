@@ -13,6 +13,7 @@ The application is built with Microsoft Foundation Classes (MFC) and is intended
 - Multiple throw results with color-coded entries
 - Parameter estimation for angle and initial velocity
 - Results dialog for review and printing
+- Help menu entry and toolbar button for opening the installed CHM contents (F1)
 - Windows desktop help integrated with the CHM help system
 - Installer package for deployment on supported Windows systems
 
